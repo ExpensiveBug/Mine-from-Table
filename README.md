@@ -19,16 +19,12 @@ streamlit run start.py
 - Export cleaned data in multiple formats
 - Dark-themed, user-friendly interface
 
----
-
 ## Application Workflow
 1. Upload dataset
 2. Preview data
 3. Preprocess columns and handle missing values
 4. Visualize statistics and distributions
 5. Export the processed dataset
-
----
 
 # Table of Contents
 1. [Go to Preprocess Data](#preprocess-data)
@@ -55,8 +51,6 @@ Choose one of the following methods:
 - Fill with a custom value
 Apply changes instantly with the **Apply Changes** button.
 
----
-
 ## Data Visualization
 ### Column Statistics
 - Mean
@@ -73,28 +67,20 @@ Apply changes instantly with the **Apply Changes** button.
 - Histogram plots for selected numeric columns
 - Interactive column selection
 
----
-
 ## Export Data
 - Export cleaned dataset in **CSV** format
 - Custom file name support
 - One-click download
 
-
----
 ## Supported File Formats
 - `.csv`
 - `.xlsx`
-
----
 
 ## Example Dataset
 The application includes a sample dataset to demonstrate:
 - Column statistics
 - Missing value handling
 - Data visualization capabilities
-
----
 
 ## Technologies Used
 - Python
