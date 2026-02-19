@@ -5,10 +5,10 @@ This is a Project is an interactive, multi-page Streamlit dashboard designed to 
 
 ## Installation
 pip install -r requirements.txt
----
+
 ## Run the App
 streamlit run start.py
----
+
 
 ## Features
 - Upload CSV and Excel files
@@ -18,6 +18,7 @@ streamlit run start.py
 - Visualize statistical summaries and data distributions
 - Export cleaned data in multiple formats
 - Dark-themed, user-friendly interface
+
 ---
 
 ## Application Workflow
@@ -26,6 +27,7 @@ streamlit run start.py
 3. Preprocess columns and handle missing values
 4. Visualize statistics and distributions
 5. Export the processed dataset
+
 ---
 
 # Table of Contents
@@ -52,6 +54,7 @@ Choose one of the following methods:
 - Drop rows containing missing values
 - Fill with a custom value
 Apply changes instantly with the **Apply Changes** button.
+
 ---
 
 ## Data Visualization
@@ -69,16 +72,20 @@ Apply changes instantly with the **Apply Changes** button.
 ### Data Distribution
 - Histogram plots for selected numeric columns
 - Interactive column selection
+
 ---
 
 ## Export Data
 - Export cleaned dataset in **CSV** format
 - Custom file name support
 - One-click download
+
+
 ---
 ## Supported File Formats
 - `.csv`
 - `.xlsx`
+
 ---
 
 ## Example Dataset
@@ -86,6 +93,7 @@ The application includes a sample dataset to demonstrate:
 - Column statistics
 - Missing value handling
 - Data visualization capabilities
+
 ---
 
 ## Technologies Used
