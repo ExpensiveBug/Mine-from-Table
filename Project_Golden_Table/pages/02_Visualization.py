@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.markdown("<h1 style = 'color:#00E676;'> Data Visulization</h1>",
+st.markdown("<h1 style = 'color:#00E676;'> Data Visualization</h1>",
             unsafe_allow_html= True)
 
 if "df" not in st.session_state:
@@ -13,7 +13,7 @@ df = st.session_state.df
 df_col = st.session_state.df.columns.tolist()
 num_col = df.select_dtypes(include = [np.number]).columns
 
-t1, t2 = st.tabs(["Column Statistics", "Missing Values and Duplicates"])
+t1, t2, t3 = st.tabs(["Column Statistics", "Missing Values and Duplicates", "Correlation"])
 
 with t1:
     c1, c2 = st.columns(2)
@@ -85,8 +85,22 @@ with t2:
         st.subheader("Unique Rows ")
         unique = df.drop_duplicates().shape[0]
         st.text(unique)
+                
+with t3:
+    st.subheader("Correlation Matrix")
+    if len(num_col) < 2:
+        st.warning("Not enough numeric columns for correlation.")
+    else:
+        corr = df[num_col].corr()
+        fig, ax = plt.subplots()
+        cax = ax.matshow(corr, cmap="coolwarm")
+        plt.xticks(range(len(num_col)), num_col, rotation=90)
+        plt.yticks(range(len(num_col)), num_col)
+        fig.colorbar(cax)
+        st.pyplot(fig)
 
-
-# correlation tab can be added  
+        st.subheader("Correlation Table")
+        st.dataframe(corr.round(2))
+                
 # st.write("Show Columns with NaN values : ")
 # col_nan = df.columns[df.isna().any()].tolist()
